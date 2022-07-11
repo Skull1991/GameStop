@@ -1,0 +1,115 @@
+@import url("header_footer.css");
+
+.card{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.card img{
+    transition: 0.3 all;
+}
+
+.card:hover img{
+    opacity: 0.8;
+}
+
+.card .buy-btn{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.card:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.card img{
+    height: 350px;
+    width: auto;
+    object-fit: contain;
+}
+
+.row >*{
+    padding: 5px;
+}
+
+.row .Games >*{
+    color: black;
+    text-align: center;
+}
+
+.previewImg img{
+    height: auto;
+    object-fit: cover;
+
+}
+
+.carousel-item img{
+    height: 40rem;
+} 
+
+
+
+.carousel .carousel-indicators li {
+    background-color: white;
+    cursor: pointer;
+}
+.carousel .carousel-indicators li.active {
+    background-color: black;
+}
+
+/* carouselbutton */
+.pcarouselbtn1{
+    background-color: #003791;
+    color: whitesmoke;
+}
+.pcarouselbtn2{
+    background-color: #003791;
+    color: whitesmoke;
+}
+.pcarouselbtn3{
+    background-color: #003791;
+    color: whitesmoke;
+}
+.pcarouselbtn4{
+    background-color: #003791;
+    color: whitesmoke;
+}
+
+/* carousel Button Hover */
+.pcarouselbtn1:hover,
+.pcarouselbtn1:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.pcarouselbtn2:hover,
+.pcarouselbtn2:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.pcarouselbtn3:hover,
+.pcarouselbtn3:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.pcarouselbtn4:hover,
+.pcarouselbtn4:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+.btn-playstation{
+    background-color:blue;
+    color: whitesmoke;
+}

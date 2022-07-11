@@ -1,0 +1,109 @@
+@import url("header_footer.css");
+
+.card{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.card img{
+    transition: 0.3 all;
+}
+
+.card:hover img{
+    opacity: 0.8;
+}
+
+.card .buy-btn{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.card:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+.card img{
+    height: 350px;
+    width: auto;
+    object-fit: contain;
+}
+
+.row >*{
+    padding: 5px;
+}
+
+.row .Games >*{
+    color: black;
+    text-align: center;
+}
+
+.previewImg img{
+    height: auto;
+    object-fit: cover;
+
+}
+
+.carousel-item img{
+    height: 40rem;
+} 
+
+.carousel .carousel-indicators li {
+    background-color: white;
+    cursor: pointer;
+}
+.carousel .carousel-indicators li.active {
+    background-color: black;
+}
+
+/* carouselbutton */
+.xcarouselbtn1{
+    background-color: #107C10;
+    color: black;
+}
+.xcarouselbtn2{
+    background-color: #107C10;
+    color: black;
+}
+.xcarouselbtn3{
+    background-color: #107C10;
+    color: black;
+}
+.xcarouselbtn4{
+    background-color: #107C10;
+    color: black;
+}
+
+/* carousel Button Hover */
+.xcarouselbtn1:hover,
+.xcarouselbtn1:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.xcarouselbtn2:hover,
+.xcarouselbtn2:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.xcarouselbtn3:hover,
+.xcarouselbtn3:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.xcarouselbtn4:hover,
+.xcarouselbtn4:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.btn-xbox{
+    background-color: #107C10;
+    color: white;
+}

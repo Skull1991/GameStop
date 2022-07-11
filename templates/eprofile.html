@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<form action="/eupdate/{{data.id}}" method="POST">
+    {% csrf_token %}
+    <section class="vh-100" style="background-color: whitesmoke;">
+        <div class="container-fluid py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                <div class="col-xl-5 col-lg-5 col-md-5 gradient-custom text-center text-white"
+                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                    <img src="{% static '/images/logo/avtar.png' %}"
+                    alt="Avatar" class="img-fluid my-2" />
+                    <h4 class="mb-5">{{user.username}}</h4>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7">
+                    <div class="card-body p-4">
+                    <h4>Information</h4>
+                    <hr class="mt-0 mb-4">
+                    <div class="row mt-4 pt-1">
+                        <div class="col-6 mb-3">
+                        <h6>Firstname</h6>
+                        <p class="text-muted pr-4"><input type="text" class="form-control" name="first_name" value="{{data.first_name}}"></p>
+                        </div>
+                        <div class="col-6 mb-3">
+                        <h6>Lastname</h6>
+                        <p class="text-muted pr-4"><input type="text" class="form-control" name="last_name" value="{{data.last_name}}"></p>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                        <h6>Email</h6>
+                        <p class="text-muted pr-4"><input type="email" class="form-control" name="email" value="{{data.email}}"></p>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                            <input type="submit" role="button" class="btn px-4" value="Update">
+                            <!-- <button class="btn px-4 ">Save</button> -->
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</form>
+{% endblock content %}

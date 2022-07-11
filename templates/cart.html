@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<main class="site-section pt-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <table class="table-hover ">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                  </tr>
+
+                  </thead>
+
+                    <!-- {% for item in items %} -->
+
+                    <tr>
+                        <td><img src="/image/nintendo/16.png" class="img-fluid img-rounded" alt=""></td>
+                        <!-- <td><img src="/{{item.item_image}}" alt=""></td> -->
+                        <td>Pokemon Let's Go Eevee</td>
+                        <!-- <td>{{item.item_name}}</td> -->
+                        <td>$40</td>
+                        <!-- <td>{{item.item_price}}</td> -->
+                        <td>1</td>
+                        <!-- <td>{{item.item_quantity}}</td> -->
+                        <td>$40</td>
+                        <!-- <td>{{item.item_total}}</td> -->
+                        <td><button class="btn bg-danger" type="button">Remove</button></td>
+                        <!-- <td><a href="/item/delete/{{item.id}}" class="btn btn-danger" role="button">Delete</a></td> -->
+                    </tr>
+                    <!-- {%endfor%} -->
+
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

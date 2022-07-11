@@ -1,0 +1,237 @@
+
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<main class="container-fluid mainBox">
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="row">
+        <div class="col-xl-12 previewImg pb-2">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <section class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static '/images/poster/maxresdefault.jpg' %}" class="mx-auto d-block img-fluid" alt="Not Found">
+                    <div class="carousel-caption d-md-block">
+                        <h2>Grab Your Playstation 5 Now</h2>
+                        <p>Available Now </p>
+                        <button class="btn hcarouselbtn1">Buy Now</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static '/images/poster/poster2.png' %}" class="mx-auto d-block img-fluid" alt="Not Found">
+                    <div class="carousel-caption d-md-block">
+                        <h2>Grab Your Xbox Series Now</h2>
+                        <p>Available Now </p>
+                        <button class="btn hcarouselbtn2">Buy Now</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static '/images/poster/Untitled.webp' %}" class="mx-auto d-block img-fluid" alt="Not Found">
+                    <div class="carousel-caption d-md-block">
+                        <h2>Grab Your Nintendo Switch Now</h2>
+                        <p>Available Now</p>
+                        <button class="btn hcarouselbtn3">Buy Now</button>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static '/images/poster/poster3.png' %}" class="mx-auto d-block img-fluid" alt="Not Found">
+                    <div class="carousel-caption d-md-block">
+                        <h2>All Consoles Available Now</h2>
+                        <p>Available Now</p>
+                        <button class="btn hcarouselbtn4">Buy Now</button>
+                    </div>
+                  </div>
+                </section>
+              </div>
+        </div>
+    </div>
+</main>
+<div class="featured-image my-5 d-flex justify-content-around">
+  <div class="playstation">
+    <a href="#playstation"><img src="{% static '/images/logo/pslogo.png' %}" class="img-fluid" alt=""></a>
+  </div>
+  <div class="xbox">
+    <a href="#xbox"><img src="{% static '/images/logo/xlogo.png' %}" class="img-fluid" alt=""></a>
+  </div>
+  <div class="nintendo">
+    <a href="#nintendo"><img src="{% static '/images/logo/nslogo.png' %}" class="img-fluid" alt=""></a>
+  </div>
+</div>
+<h1 class="text-center my-4">New Latest Consoles</h1>
+<div class="row px-5 mt-4">
+  <div class="col-xl-4 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/PS5.png' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/xbox5.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/nintendo5.webp' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section id="playstation" class="container-fluid">
+  <h1 class="text-center my-4">Playstation Accessories</h1>
+<div class="row px-5">
+  <div class="col-xl-6 col-lg-8 col-md-12 col-12 ">
+    <div class="card main-video">
+      <video autoplay muted loop playsinline>
+        <source class="img-fluid" src="{% static '/video/playstation.mp4' %}" type="video/mp4">
+      </video>  
+      <div class="card-body">
+        <h1 class="text-center">Playstation</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/pscam.webp' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/ps4ac.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/back.webp' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="xbox" class="container-fluid">
+  <h1 class="text-center my-4">Xbox Accessories</h1>
+<div class="row px-5">
+  <div class="col-xl-6 col-lg-8 col-md-12 col-12 ">
+    <div class="card main-video">
+      <video autoplay muted loop playsinline>
+        <source class="img-fluid" src="{% static '/video/xbox.mp4' %}" type="video/mp4">
+      </video>  
+      <div class="card-body">
+        <h1 class="text-center">Xbox</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/stand.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/xboxac.webp' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/xboxhead.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="nintendo" class="container-fluid">
+  <h1 class="text-center my-4">Nintendo Accessories</h1>
+<div class="row px-5">
+  <div class="col-xl-6 col-lg-8 col-md-12 col-12 ">
+    <div class="card main-video">
+      <video autoplay muted loop playsinline>
+        <source class="img-fluid" src="{% static '/video/nintendo.mp4' %}" type="video/mp4">
+      </video>  
+      <div class="card-body">
+        <h1 class="text-center">Nintendo Switch</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/joy-con.webp' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/case.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
+    <div class="card">
+      <img src="{% static '/images/controller.jpg' %}" alt="">
+      <div class="card-body text-center">
+        <h2></h2>
+        <p>Price:$</p>
+        <a href="" class="btn btn-xbox buy-btn">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+{% endblock content %}

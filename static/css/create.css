@@ -1,0 +1,109 @@
+@import url("header_footer.css");
+
+
+#display-image{
+
+    width: 100%;
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    height: 450px;
+
+    overflow: hidden;
+
+}  
+
+
+
+.mainArea{
+
+
+
+
+
+display: flex;
+
+
+
+justify-content: center;
+
+
+
+align-items: center;
+
+
+
+}
+
+
+
+
+
+
+
+
+.logo{
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.logo span{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+
+
+
+.imagesection img{
+
+
+
+height: 100%;
+
+
+
+width: 100%;
+
+
+
+object-fit: contain;
+
+
+
+}
+
+
+
+
+
+form h3{
+
+
+
+text-align: center;
+
+
+
+}
+
+
+
+
+
+.main-box{
+
+padding: 60px 30px;
+margin-top: 100px;
+margin-bottom: 100px;
+
+
+box-shadow: 5px 2px 17px #ddd;
+
+}
