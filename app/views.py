@@ -65,6 +65,9 @@ def contact(request):
 def cart(request):
     return render(request, 'cart.html')
 
+def recipt(request):
+    return render(request, 'recipt.html')
+
 
 def login(request):
     return render(request, 'login.html')

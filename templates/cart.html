@@ -7,13 +7,14 @@
         <div class="row mb-5">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <table>
-                  <thead>
+                  <thead class="bgc-default-tp1">
                     <tr>
                       <th>Product</th>
                       <th>Name</th>
                       <th>Price</th>
                       <th>Quantity</th>
                       <th>Total</th>
+                      <th></th>
                   </tr>
 
                   </thead>
@@ -36,7 +37,13 @@
                     </tr>
                     
                  {% endfor %}
-
+                    <tfoot>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><h2>Total:</h2></td>
+                        <td></td>
+                    </tfoot>
                 </table>
             </div>
         </div>
