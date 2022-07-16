@@ -1,11 +1,12 @@
 {% extends 'index.html' %}
 {% block content %}
+{% load cart_tag %}
 {% load static %}
 <main class="site-section pt-5">
     <div class="container">
         <div class="row mb-5">
             <div class="col-xl-12 col-lg-12 col-md-12">
-                <table class="table-hover ">
+                <table>
                   <thead>
                     <tr>
                       <th>Product</th>
@@ -17,23 +18,24 @@
 
                   </thead>
 
-                    <!-- {% for item in items %} -->
+                 {% for key,value in request.session.cart.items %}
 
                     <tr>
-                        <td><img src="/image/nintendo/16.png" class="img-fluid img-rounded" alt=""></td>
-                        <!-- <td><img src="/{{item.item_image}}" alt=""></td> -->
-                        <td>Pokemon Let's Go Eevee</td>
-                        <!-- <td>{{item.item_name}}</td> -->
-                        <td>$40</td>
-                        <!-- <td>{{item.item_price}}</td> -->
-                        <td>1</td>
-                        <!-- <td>{{item.item_quantity}}</td> -->
-                        <td>$40</td>
-                        <!-- <td>{{item.item_total}}</td> -->
-                        <td><button class="btn bg-danger" type="button">Remove</button></td>
-                        <!-- <td><a href="/item/delete/{{item.id}}" class="btn btn-danger" role="button">Delete</a></td> -->
+                        <td><img src="{{value.image}} " class="img-fluid img-rounded" alt=""></td>
+                        <td>{{value.name}} </td>
+                        <td>${{value.price}} </td>
+                        <td class="quantity">
+                            <div class="cart_quantity_button">
+                                <a class="cart_quantity_up" href="{% url 'item_increment' value.product_id %}"> + </a>
+                                <input class="cart_quantity_input" type="text" name="quantity" value="{{value.quantity}}" autocomplete="off" size="2">
+                                <a class="cart_quantity_down" href="{% url 'item_decrement' value.product_id %}"> - </a>
+                            </div>
+                        </td>
+                        <td>{{ value.price|multiply:value.quantity }}</td>
+                        <td><a style="color: white;" href="{% url 'item_clear' value.product_id %}" class="btn bg-danger" role="button" type="button">Remove</a></td>
                     </tr>
-                    <!-- {%endfor%} -->
+                    
+                 {% endfor %}
 
                 </table>
             </div>

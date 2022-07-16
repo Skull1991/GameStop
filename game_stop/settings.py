@@ -41,13 +41,12 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'item.apps.ItemConfig',
     'login.apps.LoginConfig',
-    'playstation.apps.PlaystationConfig',
-    'xbox.apps.XboxConfig',
-    'nintendo.apps.NintendoConfig',
-    'product.apps.ProductConfig'
+    'product.apps.ProductConfig',
+    'cart'
 
 ]
 
+CART_SESSION_ID = 'cart'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -67,6 +66,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'cart.context_processor.cart_total_amount',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

@@ -24,13 +24,7 @@ urlpatterns = [
     path("item/",include("item.urls")),
     path("item/",include("login.urls")),
     path("user/",include("user.urls")),
-    path("nintendo/",include("nintendo.urls")),
-    path("nintendo/",include("item.urls")),
-    path("playstation/",include("playstation.urls")),
-    path("playstation/",include("item.urls")),
-    path("xbox/",include("xbox.urls")),
-    path("xbox/",include("item.urls")),
     path('admin/', admin.site.urls),
-    path("product/",include("product.urls")),
+    path("product",include("product.urls")),
 ]
 

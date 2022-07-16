@@ -51,14 +51,14 @@
   </div>
   <h1 class="text-center my-5">Featured Products</h1>
   <div class="row">
-    {% for product in products %}
+    {% for product in nintendo %}
     <div class="col-xl-3 col-lg-3 col-md-4 col-6 Games">
       <div class="card">
-        <img src="/{{product.image}}" alt="">
+        <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><img src="/{{product.image}}" alt=""></a>
         <div class="card-body text-center">
           <h2>{{product.name}}</h2>
           <p>Price:${{product.price}}</p>
-          <a href="/nintendo/ndetails/{{product.id}}" class="btn btn-nintendo buy-btn">Buy</a>
+          <a href="{% url 'cart_add' product.id %}" class="btn btn-nintendo buy-btn">Add to Cart</a>
         </div>
       </div>
     </div>

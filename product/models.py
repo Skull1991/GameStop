@@ -10,7 +10,8 @@ class Product(models.Model):
     quantity=models.FloatField(blank=True,null=True)
     category=models.CharField(max_length=255, blank=True,null=True)
     accessories=models.CharField(max_length=255, blank=True,null=True)
-    des=models.CharField(max_length=255)
+    games=models.CharField(max_length=255, blank=True,null=True)
+    des=models.CharField(max_length=500)
     image=models.FileField(upload_to="static/images/home",default="default.jpg")
 
 
