@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<form action="/update/{{data.id}}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <main class="container wproduct my-4 py-4">
+        <div class="row mt-5">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-12 d-flex product-img">
+                <img class="img-fluid w-100 " name="image" src="../../{{data.image}}" alt="">
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-12">
+                <h1 class="pb-4" name="name">{{data.name}}</h1>
+                <h3 class="pt-2" name="price">Rs {{data.price}}</h3>
+                <h2 class="pt-2">Product Details</h2>
+                <h4 class="mt-3 mb-4" name="des">{{data.des}}</h3>
+                <span class=""></span>
+            </div>
+        </div>
+    </main>
+</form>
+
+{% endblock content %}
