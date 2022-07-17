@@ -1,0 +1,97 @@
+{% extends "admin/admin-index.html" %}
+{% block title %} Edit Product{% endblock %}
+{% block content %}
+{% load static %}
+
+
+
+
+<div class="container addForm mt-5 mb-5 ">
+
+    <div class="row ">
+        <div class="col-12">
+            <h3><b>Add product</b></h3>
+            <form action="add" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="Product Name" class="form-label"
+                            >Product Name</label
+                        >
+                        <input type="text" class="form-control" placeholder="" value="{{product.name}}" required name="name"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="Product Name" class="form-label"
+                            >Product Category</label
+                        >
+                        <input type="text" class="form-control" placeholder="" value="{{product.category}}" required name="category"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="Product Name" class="form-label"
+                            >Product Quantity</label
+                        >
+                        <input type="text" class="form-control" placeholder="" value="{{product.quantity}}" required name="quantity"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="Price" class="form-label"
+                            >Price</label
+                        >
+                        <input type="text" class="form-control" placeholder="" value="{{product.price}}" required name="price"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="accessories" class="form-label"
+                            >Accessories</label
+                        >
+                        <select name="accessories" value="{{product.accessories}}"class="form-control"   >
+                            <option   selected disabled>{{product.accessories}}</option>
+                            <option value="playstation">Playstation</option>
+                            <option  value="xbox">Xbox</option>
+                            <option  value="nintendo">Nintendo</option>
+                          </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="games" class="form-label"
+                            >Games</label
+                        >
+                        <select name="games" value="{{product.games}}"class="form-control"   >
+                            <option   selected disabled>{{product.games}}</option>
+                            <option value="playstation">Playstation</option>
+                            <option  value="xbox">Xbox</option>
+                            <option  value="nintendo">Nintendo</option>
+                          </select>
+                    </div>
+  
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label
+                            for="exampleFormControlTextarea3"
+                            class="form-label"
+                            >Product Description</label
+                        >
+                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="7" name="{{product.des}}" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Image</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1 " name="image" value="{{product.image}}"/>
+                      </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+            <button id="btn" class="btn btn-dark" value="add" type="submit" >
+                <p id="btnText">Submit</p></button>
+            </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+

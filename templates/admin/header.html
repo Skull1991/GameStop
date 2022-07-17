@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-logo ml-5 pl-5" href="/">
+        <img src="{% static '/images/logo/GameStop.svg.png' %}" class="d-inline-block align-top img-fluid" alt="Not Found">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-item" aria-controls="navbar-item" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-item">
+      <div class="navbar-nav mx-auto p-4 p-sm-0  menu">
+        <a class="nav-item nav-link {% if nbar == 'home' %}active{% endif %}" href="/adminpg/home">All Products <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link {% if nbar == 'playstation' %}active{% endif %}" href="/adminpg/addproducts">Add Item </a>
+        <a class="nav-item nav-link {% if nbar == 'xbox' %}active{% endif %}" href="order">Orders </a>
+      </div>
+      <div class="navbar-nav nav-button menu-button ">
+        <span>
+          <div class="search-container pl-2">
+            <form class="d-flex">
+              <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <a href="/adminpg/logout" class="btn btn-dark ml-2">Log Out</a>
+            </form>
+          </div>
+        </span>  
+      </div>
+    </div>
+</nav>
