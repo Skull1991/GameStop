@@ -24,7 +24,8 @@ urlpatterns = [
     path("item/",include("item.urls")),
     path("item/",include("login.urls")),
     path("user/",include("user.urls")),
-    path('admin/', admin.site.urls),
+    path("adminpg/",include("adminpg.urls")),
+    # path('admin/', admin.site.urls),
     path("product",include("product.urls")),
 ]
 

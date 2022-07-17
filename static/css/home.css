@@ -5,6 +5,15 @@
     height: 100%;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 .featured-image img{
     height: 100px;
     width: auto;

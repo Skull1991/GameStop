@@ -67,9 +67,9 @@
   {% for product in console %}
   <div class="col-xl-4 col-lg-4 col-md-4 col-6 Games">
     <div class="card">
-      <a href="details/{{product.id}}"><img src="/{{product.image}}" alt=""></a>
+      <img src="/{{product.image}}" alt="">
       <div class="card-body text-center">
-        <h2>{{product.name}}</h2>
+        <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><h2>{{product.name}}</h2></a>
         <p>${{product.price}}</p>
         <a href="{% url 'cart_add' product.id %}" class="btn btn-dark buy-btn">Buy</a>
       </div>
@@ -96,9 +96,9 @@
   {% for product in playstation %}
   <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
     <div class="card">
-      <a href="details/{{product.id}}"><img src="/{{product.image}}" alt=""></a>
+      <img src="/{{product.image}}" alt="">
       <div class="card-body text-center">
-        <h2>{{ product.name }}</h2>
+        <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><h2>{{product.name}}</h2></a>
         <p>Price:${{ product.price }}</p>
         <a href="{% url 'cart_add' product.id %}" class="btn btn-playstation buy-btn">Buy</a>
       </div>
@@ -123,9 +123,9 @@
   {% for product in xbox %}
   <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
     <div class="card">
-      <a href="details/{{product.id}}"><img src="/{{product.image}}" alt=""></a>
+      <img src="/{{product.image}}" alt="">
       <div class="card-body text-center">
-        <h2>{{ product.name }}</h2>
+        <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><h2>{{product.name}}</h2></a>
         <p>Price:${{ product.price }}</p>
         <a href="{% url 'cart_add' product.id %}" class="btn btn-xbox buy-btn">Buy</a>
       </div>
@@ -150,9 +150,9 @@
   {% for product in nintendo %}
   <div class="col-xl-3 col-lg-4 col-md-4 col-6 Games">
     <div class="card">
-      <a href="details/{{product.id}}"><img src="/{{product.image}}" alt=""></a>
+      <img src="/{{product.image}}" alt="">
       <div class="card-body text-center">
-        <h2>{{ product.name }}</h2>
+        <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><h2>{{product.name}}</h2></a>
         <p>Price:${{ product.price }}</p>
         <a href="{% url 'cart_add' product.id %}" class="btn btn-nintendo buy-btn">Buy</a>
       </div>
