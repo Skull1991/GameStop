@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+{% if searched %}
+    <!-- <h1>You searched for{{ searched }}</h1><br>
+    {% for product in products %}
+    {{ product }}
+
+    {% endfor %} -->
+    <h1 class="text-center mt-4">Showing Result for {{ searched }} </h1>
+    <main class="container-fluid mainBox mt-4">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-xl-3 col-lg-3 col-md-4 col-6 Games">
+        <div class="card">
+            <img src="/{{product.image}}" alt="">
+            <div class="card-body text-center">
+            <a href="details/{{product.id}}" data-toggle="tooltip" data-placement="bottom" title="View Details"><h2>{{product.name}}</h2></a>
+            <p>Price:${{product.price}}</p>
+            <a href="edit/{{product.id}}" class="btn btn-dark buy-btn">Edit</a>
+            <a href="delete/{{product.id}}" class="btn btn-dark buy-btn">Delete</a>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    </main>
+{% else %}
+    <h1>You forget to search</h1>
+
+
+{% endif %}
+
+{% endblock content %}
