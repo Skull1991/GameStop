@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'product.apps.ProductConfig',
     'adminpg.apps.AdminpgConfig',
+    'orders.apps.OrdersConfig',
     'cart'
 
 ]

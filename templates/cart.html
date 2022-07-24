@@ -49,5 +49,60 @@
         </div>
     </div>
 </main>
+<divc class="row justify-content-center">
+    <div class="col-lg-12">
+        
+        <div class="card">
+            <form action="/product/checkout" method="POST">
+            {% csrf_token %}
+            <div class="row ">
+                
+                <div class="cc-selector col-lg-2 ml-5 ">
+                    <input checked="checked" id="esewa" type="radio" name="payment" value="esewa" />
+                    <label class="drinkcard-cc esewa" for="esewa"></label>
+                    <input id="khalti" type="radio" name="payment" value="khalti" />
+                    <label class="drinkcard-cc khalti"for="khalti"></label>
+                </div>
+                <div class="col-lg-5" id="fields">
+                    <div class="row px-2">
+                        <div class="form-group col-md-6">
+                            <label class="form-control-label " >Phone number</label>
+                            <input class="form-control" type="text" id="phno" required name="phonenumber" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-control-label">Email</label>
+                            <input class="form-control" type="text" id="email" name="email" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="form-group col-md-6">
+                            <label class="form-control-label">Shipping Address</label>
+                            <input class="form-control" type="text" id="shipadd" required name="address" placeholder="Address">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-2">
+                    <div class="row d-flex justify-content-between px-4">
+                        <p class="mb-1 text-left">Total Amount</p>
+                        <h6 class="mb-1 text-right">${{cart_total_amount}}</h6>
+                    </div>
+                    <div class="row d-flex justify-content-between px-4">
+                        <p class="mb-1 text-left">Free Shipping</p>
+                    </div>
+                
+                    <button type="submit" class="btn-block btn-success">
+                        <span>
+                             <span id="checkout">Checkout</span>
+                            <!-- <span id="check-amt">${{total}}</span> -->
+                            <span id="check-amt">${{cart_total_amount}}</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</divc>
+</div>
 
 {% endblock content %}

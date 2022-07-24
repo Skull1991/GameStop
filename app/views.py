@@ -118,3 +118,4 @@ def cart_clear(request):
 
 def cart_detail(request):
     return render(request, 'cart/cart_detail.html')
+

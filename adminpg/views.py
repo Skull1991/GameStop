@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 from django.contrib import messages
-# from orders.models import Order
+from orders.models import Order
 from product.forms import ProductForm
 from django.contrib.auth.decorators import login_required
 from product.views import Product
@@ -45,7 +45,7 @@ def logoutadmin(request):
 
 @login_required(login_url="/admin") 
 def addproducts(request):
-    return render(request, "admin/addproduct1.html")
+    return render(request, "admin/addproduct.html")
 
 def add(request):
     data = ProductForm(request.POST, request.FILES)
