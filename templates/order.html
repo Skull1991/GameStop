@@ -1,0 +1,66 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="page-content container">
+
+    <div class="container px-0">
+        <div class="row mt-4">
+            <div class="col-12 col-lg-12"> 
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-xl-12 text-center ">
+                        <h2>Purchase Recipt</h2>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 mt-4">
+                    <div class="row text-600 text-white bgc-default-tp1 py-25">
+                        <div class="col-9 col-sm-5 pl-4">Product</div>
+                        <div class="d-none d-sm-block col-4 col-sm-2">Qty</div>
+                        <div class="d-none d-sm-block col-sm-2">Price</div>
+                        <div class="col-2">Date</div>
+                    </div>
+                    
+                    <div class="text-95 text-secondary-d3">
+                        {% for order in order %}
+                        <div class="row mb-2 mb-sm-0 py-25">
+                            <div class="col-9 col-sm-5 pl-4">{{order.name}}</div>
+                            <div class="d-none d-sm-block col-2">{{order.quantity}}</div>
+                            <div class="d-none d-sm-block col-2 text-95">${{order.total}}</div>
+                            <div class="col-2 text-secondary-d2">{{order.date}}</div>
+                        </div>
+                        {% endfor %}                   
+                    </div>
+
+                    <div class="row border-b-2 brc-default-l2"></div>
+
+                    
+
+                    <div class="row mt-3">
+                        <div class="tracking col-xl-12">
+                            <div class="title">Tracking Order</div>
+                        </div>
+                        <div class="progress-track col-xl-12">
+                            <ul id="progressbar">
+                                <li class="step0 active font-weight-bold " id="step1">Ordered</li>
+                                <li class="step0 active text-center font-weight-bold" id="step2">Shipped</li>
+                                <li class="step0 active text-right font-weight-bold" id="step3">On the way</li>
+                                <li class="step0 text-right font-weight-bold" id="step4">Delivered</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="mb-5 text-center">
+                        <span class="text-secondary-d1 text-105 font-weight-bold">Thank you for Purchasing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
